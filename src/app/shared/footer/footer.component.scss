@@ -1,0 +1,30 @@
+footer {
+    background-color: #97AB78;
+    padding: 15px;
+    color: white;
+
+    .container {
+        width: 100%;
+        max-width: 750px;
+        margin: auto;
+        padding-top: 50px;
+
+        .cols {
+            display: flex;
+            gap: 50px;
+
+            .col {
+                flex: 1;
+
+                .section {
+                    margin-bottom: 25px;
+
+                    .section-title {
+                        font-weight: bold;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+}

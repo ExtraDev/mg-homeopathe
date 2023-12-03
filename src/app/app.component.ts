@@ -1,10 +1,41 @@
 import { Component } from '@angular/core';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'mg-homeopathe';
+    title = 'mg-homeopathe';
+
+    constructor(private translocoService: TranslocoService) { }
+
+    public languagesList: Array<Record<'code' | 'name' | 'shortlang', string>> = [
+        {
+            code: 'fr',
+            name: 'Français',
+            shortlang: 'FR',
+        }, {
+            code: 'en',
+            name: 'English',
+            shortlang: 'ENG',
+        }, {
+            code: 'uk',
+            name: 'Ukrainien',
+            shortlang: 'UK',
+        }, {
+            code: 'ru',
+            name: 'Russe',
+            shortlang: 'Russe',
+        }
+    ]
+
+    public changeLanguage(language: string): void {
+        this.translocoService.setActiveLang(language);
+    }
+
+    public getLanguageList(): Array<Record<'code' | 'name' | 'shortlang', string>> {
+        return this.languagesList;
+    }
 }

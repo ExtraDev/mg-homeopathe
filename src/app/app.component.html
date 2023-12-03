@@ -1,2 +1,61 @@
+<nav>
+    <div class="nav-item-container">
+        <div class="nav-item" routerLink="/">Accueil</div>
+        <div class="nav-item" routerLink="test">Consultation homéopathique</div>
+        <div class="nav-item" routerLink="cons-phyto">Consultation phytothérapie</div>
+        <div class="nav-item" routerLink="info">Informations pratiques</div>
+    </div>
+</nav>
+
 <router-outlet></router-outlet>
-<button mat-raised-button color="primary">Primary</button>
+
+<!-- 
+<h1>{{'title' | transloco}}</h1>
+
+<ul>
+    <li *ngFor="let language of languagesList" (click)=" changeLanguage(language.code)">
+        {{language.code}}
+    </li>
+</ul> -->
+
+
+<!-- TO MOVE TO HOME PAGE -->
+<app-banner></app-banner>
+
+<h1>Docteur et Homéopathe</h1>
+
+<div class="container">
+    <div class="cols">
+        <div class="col">
+            <p>
+                Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un
+                paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe
+                Ceci
+                est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un
+                paragraphe Ceci est un paragraphe Ceci est un paragraphe
+            </p>
+            <p>
+                Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un
+                paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe
+                Ceci
+                est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un
+                paragraphe Ceci est un paragraphe Ceci est un paragraphe
+            </p>
+            <p>
+                Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un
+                paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe
+                Ceci
+                est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un paragraphe Ceci est un
+                paragraphe Ceci est un paragraphe Ceci est un paragraphe
+            </p>
+        </div>
+        <div class="col">
+            <img src="../assets/img/profil.jpg" alt="">
+        </div>
+    </div>
+
+
+    <a class="onedoc-url" href="https://www.onedoc.ch/fr/" target="_blank">Prendre rendez-vous</a>
+</div>
+
+<app-footer></app-footer>
