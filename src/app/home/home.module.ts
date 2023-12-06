@@ -4,6 +4,7 @@ import { HomeComponent } from './home.component';
 import { TranslocoRootModule } from '../shared/transloco-root.module';
 import { MatButtonModule } from '@angular/material/button';
 import { SharedModule } from '../shared/shared.module';
+import { HomeRoutingModule } from './home-routing.module';
 
 @NgModule({
     declarations: [
@@ -11,9 +12,10 @@ import { SharedModule } from '../shared/shared.module';
     ],
     imports: [
         CommonModule,
+        HomeRoutingModule,
         TranslocoRootModule,
         MatButtonModule,
-        SharedModule
+        SharedModule,
     ]
 })
 export class HomeModule { }

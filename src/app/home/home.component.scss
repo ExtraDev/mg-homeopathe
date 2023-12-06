@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    // gap: 50px;
+    text-align: center;
+
+    .cols {
+        display: flex;
+        padding: 15px;
+
+        .col {
+            flex: 1;
+
+            img {
+                width: 70%;
+                margin-left: 15%;
+            }
+
+            p {
+                text-align: justify;
+                margin-top: 0;
+            }
+        }
+    }
+
+    button {
+        margin: auto;
+        margin: 25px;
+    }
+}
