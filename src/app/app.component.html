@@ -1,11 +1,17 @@
-<nav>
+<nav [ngClass]="{'show': showNavBar}">
     <div class="nav-item-container">
-        <div class="nav-item" routerLink="/">Accueil</div>
-        <div class="nav-item" routerLink="test">Consultation homéopathique</div>
-        <div class="nav-item" routerLink="cons-phyto">Consultation phytothérapie</div>
-        <div class="nav-item" routerLink="info">Informations pratiques</div>
+        <div class="nav-item" (click)="hiddeNavbar()" routerLink="/">Accueil</div>
+        <div class="nav-item" (click)="hiddeNavbar()" routerLink="consultation/homeo">Consultation homéopathique</div>
+        <div class="nav-item" (click)="hiddeNavbar()" routerLink="consultation/phyto">Consultation phytothérapie</div>
+        <div class="nav-item" (click)="hiddeNavbar()" routerLink="info">Informations pratiques</div>
     </div>
 </nav>
+
+<div class="burger" (click)="toggleNavbar()">
+    <div class="layer"></div>
+    <div class="layer"></div>
+    <div class="layer"></div>
+</div>
 
 <router-outlet></router-outlet>
 
@@ -17,6 +23,3 @@
         {{language.code}}
     </li>
 </ul>
-
-
-<!-- TO MOVE TO HOME PAGE -->

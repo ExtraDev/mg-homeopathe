@@ -7,7 +7,8 @@ import { TranslocoService } from '@ngneat/transloco';
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-    title = 'mg-homeopathe';
+    public title = 'mg-homeopathe';
+    public showNavBar: boolean = false;
 
     constructor(private translocoService: TranslocoService) { }
 
@@ -37,5 +38,14 @@ export class AppComponent {
 
     public getLanguageList(): Array<Record<'code' | 'name' | 'shortlang', string>> {
         return this.languagesList;
+    }
+
+    public toggleNavbar() {
+        console.log("toggleNavbar");
+        this.showNavBar = !this.showNavBar;
+    }
+
+    public hiddeNavbar() {
+        this.showNavBar = false;
     }
 }
