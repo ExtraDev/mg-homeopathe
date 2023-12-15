@@ -1,34 +1,41 @@
 .dropper {
     flex: 1;
     display: flex;
-    background-color: #97AB78;
-    color: white;
-    border: 2px solid #DAD2BE;
-    border-radius: 5px;
-    text-decoration: none;
-    padding: 15px;
-    width: 90%;
-    margin: auto;
+    flex-direction: column;
+    width: 100%;
 
-    .dropper-title {
-        display: flex;
+    .dropper-btn {
         flex: 1;
-        vertical-align: middle;
-        justify-items: center;
+        display: flex;
+        background-color: #97AB78;
+        color: white;
+        border: 2px solid #DAD2BE;
+        border-radius: 5px;
+        text-decoration: none;
+        padding: 15px;
+        // width: 100%;
+        // margin: auto;
+
+        .dropper-title {
+            display: flex;
+            flex: 1;
+            vertical-align: middle;
+            justify-items: center;
+        }
+
     }
 
-}
+    .dropper:hover {
+        cursor: pointer;
+    }
 
-.dropper:hover {
-    cursor: pointer;
-}
+    .dropper-content {
+        display: none;
+        text-align: justify;
+        padding: 20px;
+    }
 
-.dropper-content {
-    display: none;
-    text-align: justify;
-    padding: 20px;
-}
-
-.show {
-    display: block;
+    .show {
+        display: block;
+    }
 }
