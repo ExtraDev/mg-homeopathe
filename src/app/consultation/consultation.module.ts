@@ -6,6 +6,7 @@ import { HomeoComponent } from './homeo/homeo.component';
 import { PhytoComponent } from './phyto/phyto.component';
 import { SharedModule } from '../shared/shared.module';
 import { DropperComponent } from './dropper/dropper.component';
+import { TranslocoModule } from '@ngneat/transloco';
 
 
 @NgModule({
@@ -17,7 +18,11 @@ import { DropperComponent } from './dropper/dropper.component';
   imports: [
     CommonModule,
     ConsultationRoutingModule,
-    SharedModule
+    SharedModule,
+    TranslocoModule
+  ],
+  exports: [
+    DropperComponent
   ]
 })
 export class ConsultationModule { }

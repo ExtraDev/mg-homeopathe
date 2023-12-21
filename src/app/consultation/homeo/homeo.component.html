@@ -2,6 +2,7 @@
 
 <div class="container">
     <h1>Consultation homéopathique</h1>
+    <!-- <h2>{{'title' | transloco}}</h2> -->
 
     <div class="col-full">
         <p>
@@ -27,9 +28,12 @@
     <h2>Patologie tratée</h2>
     <div class="cols">
         <div class="col">
-            <app-dropper>Bonjour à tous</app-dropper>
-            <app-dropper>Je suis une une patologie</app-dropper>
-            <app-dropper>Incroyable</app-dropper>
+            <ng-container *transloco="let t">
+                <app-dropper *ngFor="let patology of t('patologies')">
+                    <header>{{patology.title}}</header>
+                    {{patology.content}}
+                </app-dropper>
+            </ng-container>
         </div>
         <div class="col">
             <app-dropper>Hehe</app-dropper>
@@ -41,11 +45,12 @@
     <h2>Questions fréquentes</h2>
     <div class="cols">
         <div class="col">
-            <app-dropper>Question 1</app-dropper>
-            <app-dropper>Question 2</app-dropper>
-            <app-dropper>Question 3</app-dropper>
+            <ng-container *transloco="let t">
+                <app-dropper *ngFor="let question of t('questions')">
+                    <header>{{question.question}}</header>
+                    {{question.content}}
+                </app-dropper>
+            </ng-container>
         </div>
     </div>
 </div>
-
-<app-footer></app-footer>

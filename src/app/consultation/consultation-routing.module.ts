@@ -7,9 +7,7 @@ const routes: Routes = [
   { path: 'homeo', component: HomeoComponent },
   { path: 'phyto', component: PhytoComponent },
   { path: '**', component: HomeoComponent }
-
 ];
-
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
