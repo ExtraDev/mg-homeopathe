@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
+import { languagesList } from 'src/environments/environments';
 
 @Component({
     selector: 'app-root',
@@ -9,31 +10,12 @@ import { TranslocoService } from '@ngneat/transloco';
 export class AppComponent {
     public title = 'mg-homeopathe';
     public showNavBar: boolean = false;
+    public languagesList = languagesList;
 
-    constructor(private translocoService: TranslocoService) { }
-
-    public languagesList: Array<Record<'code' | 'name' | 'shortlang', string>> = [
-        {
-            code: 'fr',
-            name: 'Français',
-            shortlang: 'FR',
-        }, {
-            code: 'en',
-            name: 'English',
-            shortlang: 'ENG',
-        }, {
-            code: 'uk',
-            name: 'Ukrainien',
-            shortlang: 'UK',
-        }, {
-            code: 'ru',
-            name: 'Russe',
-            shortlang: 'Russe',
-        }
-    ]
+    constructor() { }
 
     public changeLanguage(language: string): void {
-        this.translocoService.setActiveLang(language);
+        // this.translocoService.setActiveLang(language);
     }
 
     public getLanguageList(): Array<Record<'code' | 'name' | 'shortlang', string>> {
